@@ -1,0 +1,17 @@
+From: Microsoft Support <support-secure@micros0ft-services.com>
+Subject: Your Account Will Be Locked – Immediate Action Required!
+Message:
+
+Dear User,
+Your Microsoft account is scheduled for suspension due to unusual activity.
+You must verify your information imediatlly to avoid permanent lock.
+
+Click the link below:
+https://microsoft.com/security  (actually redirects to malicious host)
+
+Or download and fill the attached form:
+Account_Update_Form.zip
+
+Failure to act will result in account termination.
+
+Microsoft Support Team
