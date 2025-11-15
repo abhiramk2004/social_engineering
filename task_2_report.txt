@@ -1,0 +1,118 @@
+PHISHING EMAIL ANALYSIS REPORT – TASK 2
+
+1. Overview
+This report analyzes a sample phishing email to identify red flags, malicious indicators, and social engineering techniques used by attackers. The objective is to understand how phishing attempts compromise user trust and how to detect them using structural analysis, header inspection, and link verification.
+
+2. Email Sample Analyzed
+Subject: Your Account Will Be Locked – Immediate Action Required!
+Sender Display Name: Microsoft Support
+Actual Sender Email: support-secure@micros0ft-services.com
+Message: “Your account is scheduled for suspension. Verify immediately.”
+Button/Link: “Verify Your Account”
+Actual URL: http://secure-verification-login.microsoft-check-auth.io/login
+Attachment: Account_Update_Form.zip
+
+3. Phishing Indicators Identified
+
+A. Sender Address Abuse / Email Spoofing
+- Display name is “Microsoft Support,” but domain is micros0ft-services.com.
+- The “0” instead of “o” is a classic typosquatting technique.
+- Domain is not owned by Microsoft.
+
+B. Suspicious & Mismatched Links
+Displayed link: https://microsoft.com/security
+Actual redirect: http://secure-verification-login.microsoft-check-auth.io/login
+This uses multi-subdomain obfuscation to appear legitimate.
+
+C. Urgency / Fear-Based Language
+Examples:
+- “Your account will be locked!”
+- “Immediate action required”
+- “Verify now to avoid suspension”
+Attackers try to trigger panic and quick action.
+
+D. Unusual Attachment (ZIP File)
+Attachment: Account_Update_Form.zip
+ZIP files often contain:
+- Keyloggers
+- Remote access trojans
+- Credential stealers
+Legitimate companies never send verification forms inside ZIP files.
+
+E. Spelling & Grammar Errors
+Examples found:
+- “Your account will be suspend.”
+- “Please update immediatly.”
+These are common in phishing emails.
+
+F. Header Analysis (Using MXToolbox / Google Header Analyzer)
+- SPF: FAIL (Sender not authorized for domain)
+- DKIM: Invalid signature
+- DMARC: No policy alignment
+- “Received” path shows routing through unknown overseas servers
+Indicates sender identity is spoofed.
+
+4. Social Engineering Techniques Used
+
+1. Authority Abuse  
+   Pretends to be Microsoft technical support.
+
+2. Fear & Urgency  
+   “Your account will be locked” forces fast action.
+
+3. Link Masking  
+   Text shows a trusted URL but redirects elsewhere.
+
+4. Brand Imitation  
+   Uses Microsoft colors, style, branding.
+
+5. Attachment Bait  
+   ZIP file disguised as a verification form.
+
+5. Threat Summary
+If the user opened the link or the ZIP file, possible risks include:
+- Credential theft
+- Malware installation
+- Keylogging
+- Account compromise
+- Identity theft
+- Internal network infiltration
+
+6. Conclusion
+The analyzed email is a high-risk phishing attempt. It uses spoofed domains, suspicious attachments, fear-based language, mismatched URLs, and authentication header failures. All signs indicate it is malicious and should be immediately reported and blocked.
+
+7. Recommended Countermeasures
+- Do NOT click any links or open the attachment.
+- Report the email to the organization’s security team.
+- Block the sender domain.
+- Mark the email as phishing.
+- Enable Multi-Factor Authentication (MFA).
+- Check account for abnormal login attempts.
+
+8. Interview Question Answers
+
+Q1. What is phishing?
+A fraudulent attempt to steal information by impersonating trusted entities.
+
+Q2. How to identify a phishing email?
+By checking sender address, suspicious links, grammar issues, urgency, attachments, and header results.
+
+Q3. What is email spoofing?
+Faking the sender address to appear legitimate.
+
+Q4. Why are phishing emails dangerous?
+They can steal credentials, deliver malware, or take over accounts.
+
+Q5. How to verify sender authenticity?
+Check SPF, DKIM, DMARC, and domain reputation.
+
+Q6. Tools for header analysis?
+MXToolbox, Google Header Analyzer, Microsoft Message Header Tool.
+
+Q7. Actions to take on suspected phishing?
+Do not interact; report and block the message.
+
+Q8. How attackers use social engineering?
+By using fear, urgency, authority, impersonation, or rewards.
+
+END OF REPORT
